@@ -1,0 +1,25 @@
+@import "tailwindcss";
+
+@theme {
+  --font-heading: "IBM Plex Serif", serif;
+  --font-body: "Inter", sans-serif;
+  --color-brand-orange: #fb923c;
+  --color-brand-orange-strong: #f07510;
+  --color-brand-purple: #8f88f9;
+  --color-brand-purple-strong: #645be9;
+  --color-brand-bg: #f7f6f2;
+  --color-brand-surface: #fefefd;
+  --color-brand-text: #2f2b27;
+  --color-brand-muted: #666666;
+  --color-brand-success: #1a7d42;
+  --color-brand-border: #e7e7e7;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+canvas {
+  display: block;
+  image-rendering: pixelated;
+}

@@ -10,18 +10,17 @@ let taskIdCounter = 0;
 
 function createStations(): Station[] {
   const stationTypes: TaskStepType[] = ['tax', 'client', 'audit', 'advisory', 'sales'];
-  const stationWidth = 120;
-  const stationHeight = 90;
-  const margin = 40;
-  const topY = 60;
+  const stationWidth = 130;
+  const stationHeight = 100;
+  const margin = 30;
 
-  // Arrange stations in a U shape around the office
+  // Arrange stations around the perimeter — U shape with room to run between
   const positions = [
-    { x: margin, y: topY }, // tax - top left
-    { x: CANVAS_WIDTH - stationWidth - margin, y: topY }, // client - top right
-    { x: margin, y: CANVAS_HEIGHT - stationHeight - 160 }, // audit - bottom left
-    { x: CANVAS_WIDTH - stationWidth - margin, y: CANVAS_HEIGHT - stationHeight - 160 }, // advisory - bottom right
-    { x: (CANVAS_WIDTH - stationWidth) / 2, y: CANVAS_HEIGHT - stationHeight - 160 }, // sales - bottom center
+    { x: margin + 10, y: 130 }, // tax - left upper
+    { x: CANVAS_WIDTH - stationWidth - margin - 10, y: 130 }, // client - right upper
+    { x: margin + 10, y: CANVAS_HEIGHT - stationHeight - 80 }, // audit - left lower
+    { x: CANVAS_WIDTH - stationWidth - margin - 10, y: CANVAS_HEIGHT - stationHeight - 80 }, // advisory - right lower
+    { x: (CANVAS_WIDTH - stationWidth) / 2, y: CANVAS_HEIGHT - stationHeight - 80 }, // sales - bottom center
   ];
 
   return stationTypes.map((type, i) => {
